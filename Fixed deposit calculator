@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Fixed Deposite Calculator</h1>
+    <table align="center" >
+        
+        <tr>
+            <td><label >Name</label></td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td><label >YOB</label></td>
+            <td><input type="number" id="year"></td>
+        </tr>
+        <tr>
+            <td><label >Amount</label></td>
+            <td><input type="number" id="amt"></td>
+        </tr>
+        <tr>
+            <td><label >Tenure</label></td>
+            <td><input type="number" id="tenure"></td>
+        </tr>
+        <tr>
+            <td><button id="dep" onclick="cal()">Deposit</button></td>
+            <td><button id="can" onclick="cancel()">Cancel</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><label id="res"></label></td>
+        </tr>
+    </table>
+    <script>
+        function cal(){
+            var cancel=document.getElementById("res").innerHTML="";
+            var name=document.getElementById("name").value;
+            var p=parseInt(document.getElementById("amt").value);
+            var t=parseInt(document.getElementById("tenure").value);
+            var y=parseInt(document.getElementById("name").value);
+            var age=2023-y;
+            var rate
+                if(age<=45)
+                    {
+                           rate=5
+                    }
+                else if(age>45 && age<60)
+                    {
+                        rate=6
+                    }
+                else{
+                        rate=7.5
+                    }
+            var intr=(p*t*rate)/100;
+            var tot=p+intr;
+            alert(tot)
+           
+        }
+        function cancel()
+        {
+            var canceltik=document.getElementById("res").innerHTML="Cancelled";
+            var canceltik=document.getElementById("res").style.color="red";
+            document.getElementById("amt").value=""
+            document.getElementById("tenure").value=""
+            document.getElementById("year").value=""
+            document.getElementById("name").value=""
+        }
+       
+
+    </script>
+</body>
+</html>
