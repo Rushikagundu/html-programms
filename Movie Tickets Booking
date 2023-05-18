@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #res{
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Book My Movie.com</h1>
+    <table align="center" cellpadding="10px" cellspacing="5px;">
+        <tr>
+            <td><label>UserName</label></td>
+            <td><input type="text" required id="user"></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" required id="pswd"></td>
+        </tr>
+        <tr>
+            <td><label>Movie</label></td>
+            <td><select>
+                <option>Kushi</option>
+                <option>Custody</option>
+                <option>Evil Dead Rise</option>
+                <option>Bichhagadu 2</option>
+                <option>Ugram</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label>Class</label></td>
+            <td><select id="tclass">
+                <option value="350">Diamond</option>
+                <option value="200">Gold</option>
+                <option value="100">Silver</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label>Tickets</label></td>
+            <td><input type="number" placeholder="No of tickets" id="num"></td>
+        </tr>
+        <tr>
+            <td><label>Price</label></td>
+            <td><input type="text" id="tikprice"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="reset" value="Cancel" onclick="cancel()">
+            <button onclick="submit()">Submit</button>
+            <button onclick="book()">Book Now</button></td>
+        </tr>
+        <tr > 
+            <td colspan="2" align="center"><label for="" id="res"></label></td>
+        </tr>
+    </table>
+    <script>
+        function cancel()
+        {
+            var canceltik=document.getElementById("res").innerHTML="Tickets Cancelled";
+            var canceltik=document.getElementById("res").style.color="red";
+            document.getElementById("user").value=""
+            document.getElementById("pswd").value=""
+            document.getElementById("num").value=""
+            document.getElementById("tikprice").value=""
+        }
+        function submit()
+        {
+            var username=document.getElementById("user").value;
+            var userpswd=document.getElementById("pswd").value;
+            var correctpswd=username.substr(0,3)+"123"
+            if(userpswd!=correctpswd)
+            {
+                var canceltik=document.getElementById("res").innerHTML="Incorrect Password";
+                var canceltik=document.getElementById("res").style.color="red";
+            }
+            else
+            {
+                var price=parseInt(document.getElementById("tclass").value)
+                var tickets=parseInt(document.getElementById("num").value);
+           
+                var ticketscost=tickets*price;
+        
+                var totalcost=ticketscost+(ticketscost*12/100);
+           
+                var bill=document.getElementById("tikprice").value=totalcost
+            }
+            
+        }
+        function book()
+        {
+            var booktik=document.getElementById("res").innerHTML="Tickets Booked";
+            var booktik=document.getElementById("res").style.color="green";
+        }
+    </script>
+</body>
+</html>
