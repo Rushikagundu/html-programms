@@ -1,0 +1,100 @@
+<html>
+<head>
+<style>
+body{
+background-color:
+#f0f2f5;
+margin-left:170px;
+}
+h1{
+font-family:Tw Cen MT;
+font-size:70px;
+color:#1877f2;
+margin-top:180px;
+}
+.head1{
+font-family:Corbel;
+font-size:32px;
+color:black;
+margin-top:-45px;
+}
+
+div{
+background-color:white;
+padding:15px;
+padding-bottom:20px;
+border-radius:10px;
+width:400px;
+margin-left:620px;
+margin-top:-250px;
+width:350px;
+}
+.email{
+font-size:17px;
+color:#D4C6C9;
+padding:14px;
+width:350px;
+border-radius:8px;
+border-width:1px;
+border-color:#C4C3C9;
+border-style:solid;
+}
+.pass{
+font-size:17px;
+color:#D4C6C9;
+padding:14px;
+width:350px;
+border-radius:8px;
+border-width:1px;
+border-color:#C4C3C9;
+border-style:solid;
+}
+.login-btn{
+font-size:20px;
+font-weight:bolder;
+padding:14px;
+width:350px;
+border-radius:8px;
+border-width:0px;
+background-color:#1877F2;
+color:white;
+}
+.fp{
+color:#1877F2;
+text-decoration:none;
+font-family:Ebrima;
+font-size:15px;
+margin-left:100px;
+}
+.newacc{
+font-size:20px;
+font-weight:bolder;
+padding:14px;
+width:220px;
+border-radius:8px;
+border-width:0px;
+background-color:#42B72A;
+color:white;
+margin-left:80px;
+}
+.create{
+font-family:Ebrima;
+margin-left:640px;
+}
+</style>
+</head>
+<body>
+<h1>facebook</h1>
+<p class="head1">Facebook helps you connect and share<br> with the people in your life.
+</p>
+<div class="box">
+<input type="text" class="email" placeholder="Email address or phone number"><br><br>
+<input type="password" class="pass" placeholder="Password"><br><br>
+<input type="button" class="login-btn" value="Log in" name="Log in"><br><br>
+<a href="" class="fp">Forgotten password?</a><br><br>
+<hr><br>
+<input type="button" class="newacc" value="Create new account">
+</div>
+<p class="create"><b>Create a Page</b> for a celebrity, brand or bussiness</p>
+</body>
+</html>
